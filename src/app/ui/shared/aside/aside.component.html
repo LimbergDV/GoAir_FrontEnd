@@ -1,44 +1,27 @@
-<nav class="sidebar" [class.open]="isOpen">
-  <button class="toggle-btn" (click)="toggleSidebar()">
-    <span class="material-icons">menu</span>
-  </button>
-  <div class="logo" *ngIf="isOpen">
-    <h2>Mi App</h2>
+<aside [class.expanded]="isExpanded">
+  <div class="sidebar-toggle" (click)="toggleSidebar()">
+    <img src="assets/codex_menu.svg" alt="Toggle" />
   </div>
+  <nav>
+    <ul class="top-icons">
+      <li>
+        <img src="assets/dashboard.svg" alt="Dashboard" />
+      </li>
+      <li>
+        <img src="assets/stats.svg" alt="Stats" />
+      </li>
+      <li>
+        <img src="assets/notification.svg" alt="Notifications" />
+      </li>
+      </ul>
 
-  <ul>
-    <li>
-      <a>
-        <img src="6p27zj5d.png" width="55px" height="55px">
-
-        <span class="icon-label" *ngIf="isOpen">Inicio</span>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/estadisticas">
-        <span class="material-icons">analytics</span>
-        <span class="icon-label" *ngIf="isOpen">Estadísticas</span>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/notificaciones">
-        <span class="material-icons">notifications</span>
-        <span class="icon-label" *ngIf="isOpen">Notificaciones</span>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/ayuda">
-        <span class="material-icons">help_outline</span>
-        <span class="icon-label" *ngIf="isOpen">Ayuda</span>
-      </a>
-    </li>
-    <li>
-      <a routerLink="/perfil">
-        <span class="material-icons">person</span>
-        <span class="icon-label" *ngIf="isOpen">Perfil</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-
-
+      <ul class="bottom-icons">
+      <li class="bottom">
+        <img src="assets/help.svg" alt="Help" />
+      </li>
+      <li class="bottom">
+        <img src="assets/user-icon.svg" alt="User" />
+      </li>
+      </ul>
+  </nav>
+</aside>
