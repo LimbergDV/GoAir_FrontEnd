@@ -1,0 +1,67 @@
+.main-content {
+  margin-left: 1vh;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+main {
+  margin-left: 5.25rem;
+  padding: 20px;
+  width: 100%;
+}
+
+
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  aside {
+      width: 50px;
+  }
+
+  aside.expanded {
+      width: 150px;
+  }
+
+  nav ul li img {
+      width: 25px;
+      height: 25px;
+  }
+
+  main {
+      margin-left: 50px;
+  }
+
+  .cards {
+      flex-direction: column;
+  }
+}
+
