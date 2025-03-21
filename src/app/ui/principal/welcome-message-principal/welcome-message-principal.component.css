@@ -1,0 +1,95 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 5.25rem;
+  width: calc(100% - 5.25rem);
+  height: 60px;
+  background: white;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+aside.expanded + main .navbar {
+  left: 100px;
+  width: calc(100% - 10px);
+}
+
+header h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.status {
+  position: relative;
+  margin-top: 20px;
+}
+
+.gif-robot {
+  position: absolute;
+  right: 10vh;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gif-robot img {
+  width: 250px;
+  height: 250px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #50C878;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
+.status h2 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 1px;
+}
+
+.status p {
+  margin-top: 1.5vh;
+  font-size: 26px;
+  font-weight: 100;
+}
+
+.status-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 25px;
+  width: 320px;
+  height: 40px;
+  margin-right: 13vh;
+}
+
+.on {
+  background: #50C878;
+  color: white;
+}
+
+.off {
+  border: 2px solid red;
+  color: red;
+  background: white;
+}

@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './aside.component.css'
 })
 export class AsideComponent {
-  isOpen = false;
+  isExpanded = false;
 
   toggleSidebar() {
-    this.isOpen = !this.isOpen;
+    this.isExpanded = !this.isExpanded;
   }
 }
