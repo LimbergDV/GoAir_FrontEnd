@@ -11,6 +11,7 @@ aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 20;
 }
 
 aside.expanded {
