@@ -1,8 +1,12 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 .navbar {
   position: fixed;
   top: 0;
-  left: 5.25rem; /* Mismo ancho que el aside */
-  width: calc(100% - 5.25rem); /* Resta el ancho del aside */
+  left: 5.25rem;
+  width: calc(100% - 5.25rem);
   height: 60px;
   background: white;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
@@ -13,10 +17,9 @@
   font-weight: bold;
 }
 
-/* Si el aside se expande */
 aside.expanded + main .navbar {
-  left: 170px;
-  width: calc(100% - 170px);
+  left: 100px;
+  width: calc(100% - 10px);
 }
 
 header h1 {
@@ -24,13 +27,43 @@ header h1 {
   margin-bottom: 10px;
 }
 
+.status {
+  position: relative;
+  margin-top: 20px;
+}
+
+.gif-robot {
+  position: absolute;
+  right: 10vh;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gif-robot img {
+  width: 250px;
+  height: 250px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #50C878;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
 .status h2 {
-  font-size: 28px;
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 1px;
 }
 
 .status p {
-  font-size: 16px;
-  margin-bottom: 10px;
+  margin-top: 1.5vh;
+  font-size: 26px;
+  font-weight: 100;
 }
 
 .status-buttons {
@@ -39,15 +72,18 @@ header h1 {
 }
 
 button {
-  padding: 10px 20px;
+  font-weight: bolder;
   border: none;
   cursor: pointer;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 25px;
+  width: 320px;
+  height: 40px;
+  margin-right: 13vh;
 }
 
 .on {
-  background: green;
+  background: #50C878;
   color: white;
 }
 
