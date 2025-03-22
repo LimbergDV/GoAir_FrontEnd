@@ -93,3 +93,42 @@ button {
   color: red;
   background: white;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    left: 3.25rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gif-robot {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .gif-robot img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 1307px) {
+
+  .gif-robot img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .gif-robot {
+  position: static;
+  transform: none;
+  text-align: center;
+  margin-top: 20px;
+  right: 1vh;
+  top: 50%;
+
+  }
+}
