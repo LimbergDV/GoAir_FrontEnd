@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrincipalModule } from './ui/principal/principal.module';
 import { AsideComponent } from './ui/shared/aside/aside.component';
+import { NotificationsModule } from './ui/notifications/notifications.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +13,8 @@ import { AsideComponent } from './ui/shared/aside/aside.component';
     BrowserModule,
     AppRoutingModule,
     PrincipalModule,
-    AsideComponent
+    AsideComponent,
+    NotificationsModule
 ],
   providers: [],
   bootstrap: [AppComponent]
