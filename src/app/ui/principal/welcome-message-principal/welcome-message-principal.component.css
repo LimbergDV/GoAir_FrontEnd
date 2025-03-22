@@ -93,3 +93,10 @@ button {
   color: red;
   background: white;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    left: 3.25rem;
+    width: 100%;
+  }
+}
