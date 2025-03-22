@@ -100,3 +100,35 @@ button {
     width: 100%;
   }
 }
+
+@media (max-width: 1024px) {
+  .gif-robot {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .gif-robot img {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 1307px) {
+
+  .gif-robot img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .gif-robot {
+  position: static;
+  transform: none;
+  text-align: center;
+  margin-top: 20px;
+  right: 1vh;
+  top: 50%;
+
+  }
+}
