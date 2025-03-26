@@ -11,7 +11,7 @@ export class AppComponent {
 
   showNavbar: boolean = true;
 
-  private hiddenRoutes: string[] = ['/login', '/signUp']; // Rutas sin navbar
+  private hiddenRoutes: string[] = ['/signIn', '/signUp']; // Rutas sin navbar
 
   constructor(private router: Router) {
     this.router.events.subscribe(() => {
