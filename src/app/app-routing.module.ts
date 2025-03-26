@@ -9,7 +9,7 @@ import { RegisterPageComponent } from './ui/register/register-page/register-page
 const routes: Routes = [
   {path: "home", component: PrincipalPageComponent},
   {path: "notifications", component: NotificationsPageComponent},
-  {path: "login", component: LoginPageComponent},
+  {path: "signIn", component: LoginPageComponent},
   {path: "signUp", component: RegisterPageComponent}
 ];
 
