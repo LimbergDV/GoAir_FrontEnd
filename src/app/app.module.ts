@@ -8,13 +8,14 @@ import { NotificationsModule } from './ui/notifications/notifications.module';
 import { MetricRepository } from './core/sensors/repositories/metric.repository';
 import { MetricSocket } from './infrastructure/socket/metrics.socketRepository';
 import { ConnectionWS } from './infrastructure/socket/connection';
+import { LoginModule } from './ui/login/login.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, PrincipalModule, AsideComponent, NotificationsModule],
+  imports: [BrowserModule, AppRoutingModule, PrincipalModule, AsideComponent, NotificationsModule, LoginModule],
   providers: [{ provide: MetricRepository, useClass: MetricSocket }],
   bootstrap: [AppComponent],
-  
+
 })
 export class AppModule implements OnInit {
   constructor(private conn: ConnectionWS) {}
