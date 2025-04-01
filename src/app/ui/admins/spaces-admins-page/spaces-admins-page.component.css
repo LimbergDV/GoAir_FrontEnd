@@ -38,3 +38,12 @@ header h1 {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
+
+@media (max-width: 768px) {
+  .navbar {
+    left: 3.25rem;
+    width: calc(100% - 1.25rem);
+  }
+
+}
