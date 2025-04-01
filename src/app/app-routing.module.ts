@@ -4,13 +4,15 @@ import { PrincipalPageComponent } from './ui/principal/principal-page/principal-
 import { NotificationsPageComponent } from './ui/notifications/notifications-page/notifications-page.component';
 import { LoginPageComponent } from './ui/login/login-page/login-page.component';
 import { RegisterPageComponent } from './ui/register/register-page/register-page.component';
+import { LoginAdminsPagesComponent } from './ui/admins/login-admins-pages/login-admins-pages.component';
 
 
 const routes: Routes = [
   {path: "home", component: PrincipalPageComponent},
   {path: "notifications", component: NotificationsPageComponent},
   {path: "signIn", component: LoginPageComponent},
-  {path: "signUp", component: RegisterPageComponent}
+  {path: "signUp", component: RegisterPageComponent},
+  {path: "signInAdmins", component: LoginAdminsPagesComponent}
 ];
 
 @NgModule({
