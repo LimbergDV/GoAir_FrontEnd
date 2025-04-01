@@ -5,6 +5,7 @@ import { NotificationsPageComponent } from './ui/notifications/notifications-pag
 import { LoginPageComponent } from './ui/login/login-page/login-page.component';
 import { RegisterPageComponent } from './ui/register/register-page/register-page.component';
 import { LoginAdminsPagesComponent } from './ui/admins/login-admins-pages/login-admins-pages.component';
+import { SpacesAdminsPageComponent } from './ui/admins/spaces-admins-page/spaces-admins-page.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: "notifications", component: NotificationsPageComponent},
   {path: "signIn", component: LoginPageComponent},
   {path: "signUp", component: RegisterPageComponent},
-  {path: "signInAdmins", component: LoginAdminsPagesComponent}
+  {path: "signInAdmins", component: LoginAdminsPagesComponent},
+  {path: "grafics", component: SpacesAdminsPageComponent},
 ];
 
 @NgModule({
