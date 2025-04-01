@@ -4,6 +4,7 @@ import { LoginAdminsPagesComponent } from './login-admins-pages/login-admins-pag
 import { FormLoginAdminsComponent } from './form-login-admins/form-login-admins.component';
 import { SpacesAdminsPageComponent } from './spaces-admins-page/spaces-admins-page.component';
 import { AdminsTableComponent } from './admins-table/admins-table.component';
+import { FinderUsersComponent } from './finder-users/finder-users.component';
 
 
 
@@ -12,7 +13,8 @@ import { AdminsTableComponent } from './admins-table/admins-table.component';
     LoginAdminsPagesComponent,
     FormLoginAdminsComponent,
     SpacesAdminsPageComponent,
-    AdminsTableComponent
+    AdminsTableComponent,
+    FinderUsersComponent,
   ],
   imports: [
     CommonModule
