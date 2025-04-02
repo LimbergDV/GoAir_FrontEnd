@@ -8,6 +8,7 @@ import { FinderUsersComponent } from './finder-users/finder-users.component';
 import { TableModule } from 'primeng/table';
 import { DetailsClientPageComponent } from './details-client-page/details-client-page.component';
 import { RequestPlacesCardsComponent } from './request-places-cards/request-places-cards.component';
+import { ActivePlacesCardsComponent } from './active-places-cards/active-places-cards.component';
 
 
 
@@ -20,6 +21,7 @@ import { RequestPlacesCardsComponent } from './request-places-cards/request-plac
     FinderUsersComponent,
     DetailsClientPageComponent,
     RequestPlacesCardsComponent,
+    ActivePlacesCardsComponent,
   ],
   imports: [
     CommonModule,
