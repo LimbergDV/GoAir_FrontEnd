@@ -5,6 +5,7 @@ import { FormLoginAdminsComponent } from './form-login-admins/form-login-admins.
 import { SpacesAdminsPageComponent } from './spaces-admins-page/spaces-admins-page.component';
 import { AdminsTableComponent } from './admins-table/admins-table.component';
 import { FinderUsersComponent } from './finder-users/finder-users.component';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -17,7 +18,8 @@ import { FinderUsersComponent } from './finder-users/finder-users.component';
     FinderUsersComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    TableModule
   ]
 })
 export class AdminsModule { }
