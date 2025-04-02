@@ -6,6 +6,7 @@ import { LoginPageComponent } from './ui/login/login-page/login-page.component';
 import { RegisterPageComponent } from './ui/register/register-page/register-page.component';
 import { LoginAdminsPagesComponent } from './ui/admins/login-admins-pages/login-admins-pages.component';
 import { SpacesAdminsPageComponent } from './ui/admins/spaces-admins-page/spaces-admins-page.component';
+import { DetailsClientPageComponent } from './ui/admins/details-client-page/details-client-page.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: "signUp", component: RegisterPageComponent},
   {path: "signInAdmins", component: LoginAdminsPagesComponent},
   {path: "manage", component: SpacesAdminsPageComponent},
+  {path: "details", component: DetailsClientPageComponent}
 ];
 
 @NgModule({

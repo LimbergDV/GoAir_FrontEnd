@@ -6,6 +6,9 @@ import { SpacesAdminsPageComponent } from './spaces-admins-page/spaces-admins-pa
 import { AdminsTableComponent } from './admins-table/admins-table.component';
 import { FinderUsersComponent } from './finder-users/finder-users.component';
 import { TableModule } from 'primeng/table';
+import { DetailsClientPageComponent } from './details-client-page/details-client-page.component';
+import { RequestPlacesCardsComponent } from './request-places-cards/request-places-cards.component';
+import { ActivePlacesCardsComponent } from './active-places-cards/active-places-cards.component';
 
 
 
@@ -16,6 +19,9 @@ import { TableModule } from 'primeng/table';
     SpacesAdminsPageComponent,
     AdminsTableComponent,
     FinderUsersComponent,
+    DetailsClientPageComponent,
+    RequestPlacesCardsComponent,
+    ActivePlacesCardsComponent,
   ],
   imports: [
     CommonModule,
