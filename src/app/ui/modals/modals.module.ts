@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { NameOfPlaceComponent } from './name-of-place/name-of-place.component';
 import { FormsModule } from '@angular/forms';
 import { InformationPlaceSensorsComponent } from './information-place-sensors/information-place-sensors.component';
+import { ConfirmInstalationComponent } from './confirm-instalation/confirm-instalation.component';
 
 
 
 @NgModule({
   declarations: [
     NameOfPlaceComponent,
-    InformationPlaceSensorsComponent
+    InformationPlaceSensorsComponent,
+    ConfirmInstalationComponent
   ],
   imports: [
     CommonModule,
