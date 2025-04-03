@@ -9,6 +9,8 @@ import { TableModule } from 'primeng/table';
 import { DetailsClientPageComponent } from './details-client-page/details-client-page.component';
 import { RequestPlacesCardsComponent } from './request-places-cards/request-places-cards.component';
 import { ActivePlacesCardsComponent } from './active-places-cards/active-places-cards.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -25,7 +27,9 @@ import { ActivePlacesCardsComponent } from './active-places-cards/active-places-
   ],
   imports: [
     CommonModule,
-    TableModule
+    TableModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class AdminsModule { }

@@ -12,13 +12,27 @@ import { LoginModule } from './ui/login/login.module';
 import { RegisterModule } from './ui/register/register.module';
 import { AdminsModule } from './ui/admins/admins.module';
 import { MyPlacesModule } from './ui/my-places/my-places.module';
+import { AdminRepository } from './core/admin/repositories/admin.repository';
+import { AdminApi } from './infrastructure/api/admin.api';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, PrincipalModule, AsideComponent, NotificationsModule, LoginModule, RegisterModule, AdminsModule, MyPlacesModule],
-  providers: [{ provide: MetricRepository, useClass: MetricSocket }],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    PrincipalModule,
+    AsideComponent,
+    NotificationsModule,
+    LoginModule,
+    RegisterModule,
+    AdminsModule,
+    MyPlacesModule,
+  ],
+  providers: [
+    { provide: MetricRepository, useClass: MetricSocket },
+    { provide: AdminRepository, useClass: AdminApi },
+  ],
   bootstrap: [AppComponent],
-
 })
 export class AppModule implements OnInit {
   constructor(private conn: ConnectionWS) {}
