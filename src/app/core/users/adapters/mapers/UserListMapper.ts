@@ -1,11 +1,11 @@
-import { user } from "../../domain/user.model";
+import { User } from "../../domain/user.model";
 import { UserListDTO } from "../dtos/usersList.dto";
 
 export class UserMapper {
-  static fromDTO(dto: UserListDTO): user[] {
+  static fromDTO(dto: UserListDTO): User[] {
     return dto.data.map(
       (item) =>
-        new user(
+        new User(
           item.Id_user,
           item.First_name,
           item.Last_name,
