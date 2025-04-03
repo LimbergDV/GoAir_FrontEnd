@@ -1,0 +1,36 @@
+.notification {
+  margin-bottom: 15px;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.status-icon {
+  width:28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red { background: red; }
+.green { background: green; }
+
+.alert-icon {
+  width: 36px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 17px;
+}
+
+.bg-gray { background: #D9E2E8; }
+.bg-green { background: #DFF0D8; }
+.bg-red { background: #F8D7DA; }
