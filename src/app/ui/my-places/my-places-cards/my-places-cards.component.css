@@ -1,0 +1,92 @@
+.your-places-text {
+  font-size: 40px;
+  margin-top: 7vh;
+}
+
+.subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5vh;
+}
+
+.cards-container {
+  display: flex;
+  gap: 7vh;
+  padding: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: -2.5vh;
+  margin-top: -1.5vh;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+  width: 340px;
+  min-height: 150px;
+  transition: transform 0.3s ease;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.status-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #50C878;
+}
+
+.pin-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+.pin-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.view-button {
+  margin-top: 10px;
+  margin-left: 34vh;
+  background-color: #4285F4;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.eye-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.red { background: red; }
+.green { background: #50C878; }
+
+@media (max-width: 768px) {
+  .card {
+      width: 100%;
+  }
+}
