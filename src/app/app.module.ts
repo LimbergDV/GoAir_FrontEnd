@@ -12,10 +12,11 @@ import { LoginModule } from './ui/login/login.module';
 import { RegisterModule } from './ui/register/register.module';
 import { AdminsModule } from './ui/admins/admins.module';
 import { MyPlacesModule } from './ui/my-places/my-places.module';
+import { ModalsModule } from './ui/modals/modals.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, PrincipalModule, AsideComponent, NotificationsModule, LoginModule, RegisterModule, AdminsModule, MyPlacesModule],
+  imports: [BrowserModule, AppRoutingModule, PrincipalModule, AsideComponent, NotificationsModule, LoginModule, RegisterModule, AdminsModule, MyPlacesModule, ModalsModule],
   providers: [{ provide: MetricRepository, useClass: MetricSocket }],
   bootstrap: [AppComponent],
 
