@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SignIn } from '../../../core/admin/useCases/signIn.useCase';
 import { Admin } from '../../../core/admin/domain/admin.model';
+import { AuthSessions } from '../../../infrastructure/services/auth.sessions';
 
 @Component({
   selector: 'app-form-login-admins',
@@ -10,16 +11,16 @@ import { Admin } from '../../../core/admin/domain/admin.model';
 export class FormLoginAdminsComponent {
   admin = new Admin('', '');
 
-  constructor(private signIn: SignIn) {}
+  constructor(private signIn: SignIn, private auth: AuthSessions) {}
 
   login(): void {
     const admin = new Admin(this.admin.email, this.admin.password);
     this.signIn.execute(admin).subscribe({
-      next(res) {
-        alert(`Este es el token de la sessión: ${res.token}`);
+      next: (res) => {
+        this.auth.saveSession(res.token, 'admin'); // Guardar en el localStogare
       },
       error(err) {
-        alert(`Ha ocurrido un erro: ${err}`);
+        alert(`Ha ocurrido un erro: ${err}`); //Cambiar por alertas bien bonitas
         console.log(err);
       },
     });
