@@ -14,6 +14,8 @@ import { AdminsModule } from './ui/admins/admins.module';
 import { MyPlacesModule } from './ui/my-places/my-places.module';
 import { AdminRepository } from './core/admin/repositories/admin.repository';
 import { AdminApi } from './infrastructure/api/admin.api';
+import { UserRepository } from './core/user/repositories/user.repository';
+import { UserApi } from './infrastructure/api/user.apis';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +33,7 @@ import { AdminApi } from './infrastructure/api/admin.api';
   providers: [
     { provide: MetricRepository, useClass: MetricSocket },
     { provide: AdminRepository, useClass: AdminApi },
+    { provide: UserRepository, useClass: UserApi}
   ],
   bootstrap: [AppComponent],
 })
