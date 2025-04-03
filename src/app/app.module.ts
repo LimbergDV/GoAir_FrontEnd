@@ -11,10 +11,11 @@ import { ConnectionWS } from './infrastructure/socket/connection';
 import { LoginModule } from './ui/login/login.module';
 import { RegisterModule } from './ui/register/register.module';
 import { AdminsModule } from './ui/admins/admins.module';
+import { MyPlacesModule } from './my-places/my-places.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, PrincipalModule, AsideComponent, NotificationsModule, LoginModule, RegisterModule, AdminsModule],
+  imports: [BrowserModule, AppRoutingModule, PrincipalModule, AsideComponent, NotificationsModule, LoginModule, RegisterModule, AdminsModule, MyPlacesModule],
   providers: [{ provide: MetricRepository, useClass: MetricSocket }],
   bootstrap: [AppComponent],
 
