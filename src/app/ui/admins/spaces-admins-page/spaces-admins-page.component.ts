@@ -18,7 +18,7 @@ export class SpacesAdminsPageComponent implements OnInit {
     this.auth.validateToken('admin').then((isValid) => {
       if (!isValid) {
         this.router.navigate(['/signInAdmins']);
-      } 
+      }
     });
   }
 }

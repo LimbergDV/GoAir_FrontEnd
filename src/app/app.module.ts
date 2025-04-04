@@ -14,8 +14,9 @@ import { AdminsModule } from './ui/admins/admins.module';
 import { MyPlacesModule } from './ui/my-places/my-places.module';
 import { AdminRepository } from './core/admin/repositories/admin.repository';
 import { AdminApi } from './infrastructure/api/admin.api';
-import { UserRepository } from './core/user/repositories/user.repository';
+
 import { UserApi } from './infrastructure/api/user.apis';
+import { UserRepository } from './core/users/repositories/user.repository';
 
 @NgModule({
   declarations: [AppComponent],
