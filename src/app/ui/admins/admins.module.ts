@@ -9,7 +9,7 @@ import { DetailsClientPageComponent } from './details-client-page/details-client
 import { RequestPlacesCardsComponent } from './request-places-cards/request-places-cards.component';
 import { ActivePlacesCardsComponent } from './active-places-cards/active-places-cards.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { SpacesAdminsPageComponent } from './spaces-admins-page/spaces-admins-page.component';
 

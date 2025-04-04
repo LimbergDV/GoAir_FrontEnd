@@ -14,14 +14,10 @@ import { AdminsModule } from './ui/admins/admins.module';
 import { MyPlacesModule } from './ui/my-places/my-places.module';
 import { AdminRepository } from './core/admin/repositories/admin.repository';
 import { AdminApi } from './infrastructure/api/admin.api';
-
 import { UserApi } from './infrastructure/api/user.apis';
-<<<<<<< HEAD
 import { ApplicationRepository } from './core/applications/repositories/application.repository';
 import { ApplciationApi } from './infrastructure/api/applications.api';
-=======
 import { UserRepository } from './core/users/repositories/user.repository';
->>>>>>> ece17e162bbdfc2789c7016446993121e0a17b09
 
 @NgModule({
   declarations: [AppComponent],
