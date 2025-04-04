@@ -18,7 +18,6 @@ export class AuthSessions {
 
   async validateToken(rol: string): Promise<boolean> {
     const token = localStorage.getItem('token') || 'No token';
-    console.log(token);
 
     try {
       await firstValueFrom(this.fetchAPI(token, rol));
@@ -38,6 +37,8 @@ export class AuthSessions {
       Authorization: `Bearer ${token}`,
     });
 
-    return this.http.get<any>(rol == 'user' ? this.URL_USER : this.URL_ADMIN, { headers });
+    return this.http.get<any>(rol == 'user' ? this.URL_USER : this.URL_ADMIN, {
+      headers,
+    });
   }
 }

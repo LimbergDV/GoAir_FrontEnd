@@ -10,21 +10,14 @@ import { Router } from '@angular/router';
   styleUrl: './form-register.component.css'
 })
 export class FormRegisterComponent {
-  user = new User('','','','')
+  user = new User(0,'','','','')
 
   constructor(private SignUp: SignUp,
         private auth: AuthSessions,
         private router: Router) {}
 
       signUp(): void {
-        if (!this.user.email.trim() ||
-      !this.user.password.trim() ||
-      !this.user.first_name.trim() ||
-      !this.user.last_name.trim()) {
-    alert('Todos los campos son obligatorios.');
-    return;
-  }
-        const user = new User(this.user.email, this.user.password, this.user.first_name, this.user.last_name);
+        const user = new User(this.user.id_user, this.user.email, this.user.password, this.user.first_name, this.user.last_name);
         this.SignUp.execute(user).subscribe({
           next:(res) =>{
             this.auth.saveSession(res.token, 'user') //lo guarda en ls
