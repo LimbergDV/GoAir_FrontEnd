@@ -1,0 +1,14 @@
+<div class="search-bar">
+  <img src="assets/Search.svg" alt="Buscar" />
+  <input type="text" placeholder="Buscar usuarios" [(ngModel)]="last_name" />
+  <button class="filter-select" (click)="find()">Buscar</button>
+</div>
+
+<!-- Mostrar los detalles del usuario encontrado -->
+<div *ngIf="oppen && user" class="user-info">
+  <p><strong>Nombre:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+  <p><strong>Correo:</strong> {{ user.email }}</p>
+  <button (click)="viewDetails(user.id_user, user.first_name, user.last_name)">
+    Ver
+  </button>
+</div>

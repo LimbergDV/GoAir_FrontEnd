@@ -1,0 +1,36 @@
+.main-content {
+  margin-left: 1vh;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+main {
+  margin-left: 5.25rem;
+  padding: 20px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  aside {
+      width: 50px;
+  }
+
+  aside.expanded {
+      width: 150px;
+  }
+
+  nav ul li img {
+      width: 25px;
+      height: 25px;
+  }
+
+  main {
+      margin-left: 50px;
+  }
+
+  .cards {
+      flex-direction: column;
+  }
+}
+

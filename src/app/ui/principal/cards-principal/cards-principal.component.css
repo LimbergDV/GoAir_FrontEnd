@@ -1,0 +1,71 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10vw;
+  margin-top: 10vh;
+  padding: 0 20px;
+}
+
+.card-1, .card-2, .card-3 {
+  background: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 10px 15px rgba(0, 0, 0, 0.15);
+  width: 270px;
+  height: 310px;
+  flex: 1 1 270px;
+  max-width: 300px;
+}
+
+.card-1 {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0, 35, 207, 0.949) 100%);
+}
+
+.card-2 {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,233,48,0.9486388305322129) 100%);
+}
+
+.card-3 {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(48,153,240,0.9486388305322129) 100%);
+}
+
+.card-1 img, .card-2 img, .card-3 img {
+  width: 80px;
+  height: 80px;
+}
+
+.card-1 h3, .card-2 h3, .card-3 h3 {
+  font-size: 80px;
+  margin-top: 10px;
+}
+
+.card-1 p, .card-2 p, .card-3 p {
+  position: relative;
+  bottom: 70px;
+  font-size: 33px;
+  font-weight: bold;
+}
+
+@media (max-width: 850px) {
+  .cards {
+    flex-direction: column;
+    gap: 20px;
+
+  }
+
+  .card-1 p, .card-2 p, .card-3 p {
+    font-size: 25px;
+  }
+
+  .card-1, .card-2, .card-3 {
+    width: 90%;
+    max-width: 320px;
+  }
+}

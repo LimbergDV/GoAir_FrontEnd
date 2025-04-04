@@ -1,0 +1,21 @@
+<div class="table-container">
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th scope="col" class="first-header">Usuario</th>
+          <th scope="col" class="a">Estado de la solicitud</th>
+          <th scope="col" class="last-header">Detalles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let app of applications">
+          <td>{{ app.first_name }} {{ app.last_name }}</td>
+          <td>
+            {{ app.status_application === 'pending' ? 'Pendiente' : 'Solicitado' }}
+          </td>
+          <td><button (click)="viewDetails(app.id_user, app.first_name, app.last_name)">Ver Detalles</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
