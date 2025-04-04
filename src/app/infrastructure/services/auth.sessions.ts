@@ -1,9 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpClient,
-  HttpHeaderResponse,
-  HttpHeaders,
-} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { firstValueFrom, Observable } from 'rxjs';
 
 @Injectable({
@@ -22,20 +18,19 @@ export class AuthSessions {
 
   async validateToken(rol: string): Promise<boolean> {
     const token = localStorage.getItem('token') || 'No token';
+    console.log(token);
 
-    if (rol != 'user') {
-        try {
-            await firstValueFrom(this.fetchAPI(token, rol));
-            return true            
-        } catch (err: any) {
-            if (err.status === 401) {
-                return false
-            }
-            console.log(err);
-        }
+    try {
+      await firstValueFrom(this.fetchAPI(token, rol));
+      return true;
+    } catch (err: any) {
+      if (err.status === 401) {
+        return false;
+      }
+      console.log(err);
     }
 
-    return false
+    return false;
   }
 
   private fetchAPI(token: string, rol: string): Observable<any> {
@@ -43,10 +38,6 @@ export class AuthSessions {
       Authorization: `Bearer ${token}`,
     });
 
-    if (rol != 'user') {
-      return this.http.get<any>(this.URL_ADMIN, { headers });
-    }
-
-    return this.http.get<any>(this.URL_USER, { headers });
+    return this.http.get<any>(rol == 'user' ? this.URL_USER : this.URL_ADMIN, { headers });
   }
 }

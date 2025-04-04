@@ -11,6 +11,7 @@ import { RequestPlacesCardsComponent } from './request-places-cards/request-plac
 import { ActivePlacesCardsComponent } from './active-places-cards/active-places-cards.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -29,7 +30,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CommonModule,
     TableModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ]
 })
 export class AdminsModule { }
