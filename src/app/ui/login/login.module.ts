@@ -4,6 +4,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { FormLoginComponent } from './form-login/form-login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 
 
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterLink
   ]
 })
 export class LoginModule { }
