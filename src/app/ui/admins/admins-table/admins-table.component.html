@@ -1,24 +1,21 @@
 <div class="table-container">
-  <table class="styled-table">
+    <table class="styled-table">
       <thead>
-          <tr>
-              <th scope="col" class="first-header">Usuario</th>
-              <th scope="col" class="last-header">Detalles</th>
-          </tr>
+        <tr>
+          <th scope="col" class="first-header">Usuario</th>
+          <th scope="col" class="a">Estado de la solicitud</th>
+          <th scope="col" class="last-header">Detalles</th>
+        </tr>
       </thead>
       <tbody>
-          <tr>
-              <td>Ana López</td>
-              <td>Administrador - 5 proyectos</td>
-          </tr>
-          <tr>
-              <td>Carlos Méndez</td>
-              <td>Editor - 12 artículos</td>
-          </tr>
-          <tr>
-              <td>María González</td>
-              <td>Lector - Último acceso: hoy</td>
-          </tr>
+        <tr *ngFor="let app of applications">
+          <td>{{ app.first_name }} {{ app.last_name }}</td>
+          <td>
+            {{ app.status_application === 'pending' ? 'Pendiente' : 'Solicitado' }}
+          </td>
+          <td><button (click)="viewDetails(app.id_user, app.first_name, app.last_name)">Ver Detalles</button></td>
+        </tr>
       </tbody>
-  </table>
-</div>
+    </table>
+  </div>
+  
