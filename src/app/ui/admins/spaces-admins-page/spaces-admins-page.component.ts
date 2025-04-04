@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthSessions } from '../../../infrastructure/services/auth.sessions';
 import { Router } from '@angular/router';
+import { GetAllApplications } from '../../../core/applications/useCases/getAllAplications.useCase';
 
 @Component({
   selector: 'app-spaces-admins-page',
@@ -18,7 +19,7 @@ export class SpacesAdminsPageComponent implements OnInit {
     this.auth.validateToken('admin').then((isValid) => {
       if (!isValid) {
         this.router.navigate(['/signInAdmins']);
-      } 
+      }
     });
   }
 }

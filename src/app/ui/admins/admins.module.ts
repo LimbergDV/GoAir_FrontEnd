@@ -31,7 +31,7 @@ import { RouterModule } from '@angular/router';
     TableModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
   ]
 })
 export class AdminsModule { }

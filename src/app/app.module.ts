@@ -16,6 +16,8 @@ import { AdminRepository } from './core/admin/repositories/admin.repository';
 import { AdminApi } from './infrastructure/api/admin.api';
 import { UserRepository } from './core/user/repositories/user.repository';
 import { UserApi } from './infrastructure/api/user.apis';
+import { ApplicationRepository } from './core/applications/repositories/application.repository';
+import { ApplciationApi } from './infrastructure/api/applications.api';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,7 +35,8 @@ import { UserApi } from './infrastructure/api/user.apis';
   providers: [
     { provide: MetricRepository, useClass: MetricSocket },
     { provide: AdminRepository, useClass: AdminApi },
-    { provide: UserRepository, useClass: UserApi}
+    { provide: UserRepository, useClass: UserApi },
+    { provide: ApplicationRepository, useClass: ApplciationApi },
   ],
   bootstrap: [AppComponent],
 })
@@ -41,6 +44,6 @@ export class AppModule implements OnInit {
   constructor(private conn: ConnectionWS) {}
 
   ngOnInit(): void {
-    this.conn.connection();
+    
   }
 }

@@ -10,8 +10,8 @@ import { ConnectionWS } from './connection';
 export class MetricSocket implements MetricRepository {
   private metricSubject = new Subject<Metric>();
 
-  constructor(private conn: ConnectionWS) {
-    const socket = this.conn.getSocket();
+  constructor(private connectionWS: ConnectionWS) {
+    const socket = this.connectionWS.getOrCreateSocket('user', 'admin');
 
     socket.onmessage = (event) => {
       console.log(event.data);
@@ -22,7 +22,6 @@ export class MetricSocket implements MetricRepository {
       } catch (error) {
         console.error('Error al parsear el mensaje:', error);
       }
-      
     };
   }
 
