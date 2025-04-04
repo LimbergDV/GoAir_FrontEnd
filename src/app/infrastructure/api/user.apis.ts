@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 
 import { map, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { UserRepository } from '../../core/user/repositories/user.repository';
-import { SessionUser } from '../../core/user/domain/session.model';
-import { SessionUserMapper } from '../../core/user/adapters/mappers/session.mapper';
-import { User } from '../../core/user/domain/user.model';
-import { SessionUserDTO } from '../../core/user/adapters/dtos/session.dto';
+import { UserRepository } from '../../core/users/repositories/user.repository';
+import { User } from '../../core/users/domain/user.model';
+import { SessionUser } from '../../core/users/domain/session.model';
+import { SessionUserDTO } from '../../core/users/adapters/dtos/session.dto';
+import { SessionUserMapper } from '../../core/users/adapters/mappers/session.mapper';
+
 
 @Injectable({
   providedIn: 'root',
