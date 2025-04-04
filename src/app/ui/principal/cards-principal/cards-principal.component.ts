@@ -8,13 +8,13 @@ import { Metric } from '../../../core/sensors/domain/metric.model';
   styleUrl: './cards-principal.component.css',
 })
 export class CardsPrincipalComponent implements OnInit {
-  metics = new Metric(0, 0, 0);
+  metics = new Metric(['','',''], 0, 0, 0,'','', 0);
   constructor(private serviceMetrics: MetricSocket) {}
 
   ngOnInit(): void {
     this.serviceMetrics.getMetrics().subscribe({
       next: (data) => {
-        console.log(data);
+        //console.log(data);
         this.metics = data;
       },
       error: (err) => {
