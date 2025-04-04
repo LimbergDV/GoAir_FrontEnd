@@ -9,7 +9,7 @@
     background: #585757; /* Fondo suave */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
   }
