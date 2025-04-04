@@ -22,4 +22,5 @@ export class UserApi implements UserRepository {
       .post<SessionUserDTO>(`${this.URL_BASE}/login`, user)
       .pipe(map(SessionUserMapper.fromDTOU));
   }
+  
 }
