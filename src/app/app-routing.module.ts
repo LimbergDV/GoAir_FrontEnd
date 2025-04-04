@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: "signUp", component: RegisterPageComponent},
   {path: "signInAdmins", component: LoginAdminsPagesComponent},
   {path: "manage", component: SpacesAdminsPageComponent},
-  {path: "details", component: DetailsClientPageComponent},
+  {path: "details/:name", component: DetailsClientPageComponent},
   {path: "myPlaces", component: MyPlacesPageComponent}
 ];
 

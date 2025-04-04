@@ -48,7 +48,7 @@ export class AdminsTableComponent implements OnInit {
     this.ga.execute().subscribe({
       next: (res) => {
         console.log(res);
-        
+
         let newApp = new Application(
           res.id_application,
           res.first_name,
@@ -65,7 +65,8 @@ export class AdminsTableComponent implements OnInit {
     });
   }
 
-  viewDetails(id_user: number, id_app: number) {
-    this.router.navigate(['/details'], { queryParams: { id_user, id_app } });
+  viewDetails(id_user: number, firts_name: string, last_name: string) {
+    const name = firts_name + ' ' + last_name
+    this.router.navigate(['/details', name], { queryParams: { id_user } });
   }
 }

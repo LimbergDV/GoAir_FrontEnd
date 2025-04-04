@@ -13,7 +13,7 @@
           <td>
             {{ app.status_application === 'pending' ? 'Pendiente' : 'Solicitado' }}
           </td>
-          <td><button (click)="viewDetails(app.id_user, app.id_application)">Ver Detalles</button></td>
+          <td><button (click)="viewDetails(app.id_user, app.first_name, app.last_name)">Ver Detalles</button></td>
         </tr>
       </tbody>
     </table>

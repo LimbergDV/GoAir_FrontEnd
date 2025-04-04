@@ -35,8 +35,9 @@ export class FinderUsersComponent {
     });
   }
 
-  viewDetails(userId: number) {
+  viewDetails(id_user: number, firts_name: string, last_name: string) {
+    const name = firts_name + ' ' + last_name
     // Navegar al detalle del usuario (puedes cambiar la ruta según sea necesario)
-    this.r.navigate(['/user-details', userId]);
+    this.r.navigate(['/details', name], { queryParams: { id_user } });
   }
 }
