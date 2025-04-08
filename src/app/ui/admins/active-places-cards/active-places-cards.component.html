@@ -6,12 +6,10 @@
   </div>
 </div>
 
-<!-- Modal: se muestra solo cuando selectedPlace tiene un valor -->
-<div class="modal" *ngIf="selectedPlace">
-  <div class="modal-content">
-    <!-- Botón para cerrar la modal -->
-    <span class="close" (click)="closeModal()">&times;</span>
-    <h3>{{ selectedPlace.name }}</h3>
-    <p>Fecha de creación: {{ selectedPlace.create_at | date : "fullDate" }}</p>
-  </div>
-</div>
+<information-sensors
+  *ngIf="selectedPlace"
+  [placeName]="selectedPlace.name"
+  [placeId]="selectedPlace.id_place"
+  (closeModal)="closeModal()"
+>
+</information-sensors>

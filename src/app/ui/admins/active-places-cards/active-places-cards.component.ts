@@ -32,12 +32,10 @@ export class ActivePlacesCardsComponent implements OnInit {
     });
   }
 
-  // Abre la modal asignando el lugar clickeado
   openModal(place: Place): void {
     this.selectedPlace = place;
   }
 
-  // Cierra la modal
   closeModal(): void {
     this.selectedPlace = null;
   }
