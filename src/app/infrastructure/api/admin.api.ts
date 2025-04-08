@@ -14,6 +14,9 @@ import { PlacesResponseDTO } from '../../core/admin/adapters/dtos/placeList.dto'
 import { PlaceMapper } from '../../core/admin/adapters/mappers/place.dto';
 import { IDSDTO } from '../../core/admin/adapters/dtos/ids.dto';
 import { IDS } from '../../core/admin/adapters/mappers/ids.mapper';
+import { Application } from '../../core/admin/domain/apps.model';
+import { ApplicationsResponseDTO } from '../../core/admin/adapters/dtos/apps.dtos';
+import { ApplicationMapperRes } from '../../core/admin/adapters/mappers/apps.mapper';
 
 @Injectable({
   providedIn: 'root',
@@ -27,6 +30,14 @@ export class AdminApi implements AdminRepository {
   });
 
   constructor(private http: HttpClient) {}
+
+  getApp(id_user: number): Observable<Application[]> {
+    return this.http
+      .get<ApplicationsResponseDTO>(`${this.URL_BASE}/apps/${id_user}`, {
+        headers: this.headers,
+      })
+      .pipe(map((res) => ApplicationMapperRes.map(res)));
+  }
 
   deletePlace(id_place: number): Observable<any> {
     return this.http.delete(`${this.URL_BASE}/${id_place}`, {

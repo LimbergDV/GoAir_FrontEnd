@@ -4,7 +4,7 @@
       <h1>Detalles del cliente</h1>
     </header>
     <h1 class="name-client">{{ name }}</h1>
-    <app-request-places-cards></app-request-places-cards>
+    <app-request-places-cards [id_user]="id_user"></app-request-places-cards>
     <app-active-places-cards [id_user]="id_user"></app-active-places-cards>
   </main>
 </div>

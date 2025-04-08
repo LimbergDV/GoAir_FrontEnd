@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { SpacesAdminsPageComponent } from './spaces-admins-page/spaces-admins-page.component';
 import { InformationSensorsComponent } from './information-sensors/information-sensors.component';
+import { ModalsModule } from '../modals/modals.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { InformationSensorsComponent } from './information-sensors/information-s
     FormsModule,
     HttpClientModule,
     RouterModule,
+    ModalsModule,
   ],
 })
 export class AdminsModule {}

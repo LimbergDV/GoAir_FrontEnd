@@ -5,17 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { InformationPlaceSensorsComponent } from './information-place-sensors/information-place-sensors.component';
 import { ConfirmInstalationComponent } from './confirm-instalation/confirm-instalation.component';
 
-
-
 @NgModule({
   declarations: [
     NameOfPlaceComponent,
     InformationPlaceSensorsComponent,
-    ConfirmInstalationComponent
+    ConfirmInstalationComponent,
   ],
-  imports: [
-    CommonModule,
-    FormsModule
+  imports: [CommonModule, FormsModule],
+  exports: [
+    NameOfPlaceComponent,
+    InformationPlaceSensorsComponent,
+    ConfirmInstalationComponent,
   ],
 })
-export class ModalsModule { }
+export class ModalsModule {}
