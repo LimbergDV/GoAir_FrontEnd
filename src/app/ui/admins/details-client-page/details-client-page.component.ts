@@ -21,7 +21,6 @@ export class DetailsClientPageComponent {
     this.validateToken();
     this.route.queryParams.subscribe((params) => {
       this.id_user = params['id_user'];
-      console.log(`ID Usuario: ${this.id_user}`);
     });
 
     this.route.paramMap.subscribe((params) => {
@@ -36,5 +35,6 @@ export class DetailsClientPageComponent {
       }
     });
   }
+
   
 }

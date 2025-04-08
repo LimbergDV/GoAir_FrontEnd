@@ -9,6 +9,9 @@ import { SessionAdminMapper } from '../../core/admin/adapters/mappers/session.ma
 import { User } from '../../core/users/domain/user.model';
 import { UserDTO } from '../../core/users/adapters/dtos/User.dto';
 import { UserMapper } from '../../core/users/adapters/mappers/user.mapper';
+import { Place } from '../../core/admin/domain/place.model';
+import { PlacesResponseDTO } from '../../core/admin/adapters/dtos/placeList.dto';
+import { PlaceMapper } from '../../core/admin/adapters/mappers/place.dto';
 
 @Injectable({
   providedIn: 'root',
@@ -22,6 +25,13 @@ export class AdminApi implements AdminRepository {
   });
 
   constructor(private http: HttpClient) {}
+  getPlacesUser(id_user: number): Observable<Place[]> {
+    return this.http
+      .get<PlacesResponseDTO>(`${this.URL_BASE}/places/${id_user}`, {
+        headers: this.headers,
+      })
+      .pipe(map((res) => PlaceMapper.fromDTOArray(res.places)));
+  }
 
   searchUser(last_name: string): Observable<User> {
     return this.http

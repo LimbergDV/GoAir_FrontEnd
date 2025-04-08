@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: "signInAdmins", component: LoginAdminsPagesComponent},
   {path: "manage", component: SpacesAdminsPageComponent},
   {path: "details/:name", component: DetailsClientPageComponent},
-  {path: "myPlaces", component: MyPlacesPageComponent}
+  {path: "myPlaces", component: MyPlacesPageComponent},
 ];
 
 @NgModule({

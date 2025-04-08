@@ -3,6 +3,6 @@ export class Place {
     public id_place: number,
     public id_user: number,
     public name: string,
-    public creat_at: string
+    public create_at: string
   ) {}
 }
