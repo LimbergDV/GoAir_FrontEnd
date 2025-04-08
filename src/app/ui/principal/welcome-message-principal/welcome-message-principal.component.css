@@ -115,7 +115,7 @@ button {
   }
 }
 
-@media (max-width: 1307px) {
+/* @media (max-width: 1307px) {
 
   .gif-robot img {
     width: 250px;
@@ -130,5 +130,5 @@ button {
   right: 1vh;
   top: 50%;
 
-  }
-}
+  } 
+} */

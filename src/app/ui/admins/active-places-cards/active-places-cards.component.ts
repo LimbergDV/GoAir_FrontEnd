@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './active-places-cards.component.css'
 })
 export class ActivePlacesCardsComponent {
-
+  
 }
