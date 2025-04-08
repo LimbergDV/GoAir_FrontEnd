@@ -27,6 +27,13 @@ export class AdminApi implements AdminRepository {
   });
 
   constructor(private http: HttpClient) {}
+
+  deletePlace(id_place: number): Observable<any> {
+    return this.http.delete(`${this.URL_BASE}/${id_place}`, {
+      headers: this.headers,
+    });
+  }
+
   getIDS(id_palce: number): Observable<IDSDTO> {
     return this.http
       .get<IDSDTO>(`${this.URL_BASE}/sensors/${id_palce}`, {

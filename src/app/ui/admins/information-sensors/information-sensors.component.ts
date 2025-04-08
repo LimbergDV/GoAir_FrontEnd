@@ -3,6 +3,7 @@ import { GetIDS } from '../../../core/admin/useCases/getIDS.useCase';
 import { IDS } from '../../../core/admin/adapters/mappers/ids.mapper';
 import { Device } from '../../../core/admin/domain/device.model';
 import { Sensor } from '../../../core/admin/domain/sensor.model';
+import { DeletePalce } from '../../../core/admin/useCases/deletePlace.useCase';
 
 @Component({
   selector: 'information-sensors',
@@ -20,7 +21,7 @@ export class InformationSensorsComponent implements OnInit {
   // Permite notificar al componente padre que debe cerrar la modal
   @Output() closeModal: EventEmitter<void> = new EventEmitter<void>();
 
-  constructor(private gids: GetIDS) {}
+  constructor(private gids: GetIDS, private dp: DeletePalce) {}
 
   ngOnInit(): void {
     this.getIDS();
@@ -53,6 +54,18 @@ export class InformationSensorsComponent implements OnInit {
   }
 
   deletePlace(id_palce: number) {
+    this.dp.execute(id_palce).subscribe({
+      next: (res) => {
+        console.log(res);
+        alert('Lugar eliminado correctamente');
+        //recargar la página
+      },
+      error: (err) => {
+        console.log(err);
+        alert('Ocurrió un error al intentar eliminar el lugar');
+      },
+    });
+
     this.optionDelete = false;
     this.closeModal.emit();
   }

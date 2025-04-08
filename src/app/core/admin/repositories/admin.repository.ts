@@ -10,4 +10,5 @@ export abstract class AdminRepository {
   abstract searchUser(last_name: string): Observable<User>;
   abstract getPlacesUser(id_user: number): Observable<Place[]>;
   abstract getIDS(id_palce: number): Observable<IDSDTO>;
+  abstract deletePlace(id_place: number): Observable<any>;
 }
