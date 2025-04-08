@@ -10,6 +10,9 @@ import { SessionUserMapper } from '../../core/users/adapters/mappers/session.map
 import { Place } from '../../core/admin/domain/place.model';
 import { PlacesResponseDTO } from '../../core/admin/adapters/dtos/placeList.dto';
 import { PlaceMapper } from '../../core/admin/adapters/mappers/place.dto';
+import { Application } from '../../core/admin/domain/apps.model';
+import { ApplicationsResponseDTO } from '../../core/admin/adapters/dtos/apps.dtos';
+import { ApplicationMapperRes } from '../../core/admin/adapters/mappers/apps.mapper';
 
 @Injectable({
   providedIn: 'root',
@@ -24,6 +27,23 @@ export class UserApi implements UserRepository {
   });
 
   constructor(private http: HttpClient) {}
+  getAppsUser(): Observable<Application[]> {
+    return this.http
+      .get<ApplicationsResponseDTO>(`http://52.6.93.122/applications/apps`, {
+        headers: this.headers,
+      })
+      .pipe(map((res) => ApplicationMapperRes.map(res)));
+  }
+
+  createApp(): Observable<any> {
+    return this.http.post(
+      'http://52.6.93.122/applications/',
+      {},
+      {
+        headers: this.headers,
+      }
+    );
+  }
 
   getPlaces(): Observable<Place[]> {
     return this.http

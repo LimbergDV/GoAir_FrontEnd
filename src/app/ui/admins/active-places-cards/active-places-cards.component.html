@@ -1,12 +1,15 @@
 <h3 class="subtitle">Lugares activos</h3>
 <div class="cards-container">
-  <div class="card">
-      <h3>Espacio #1</h3>
-  </div>
-  <div class="card">
-      <h3>Espacio #2</h3>
-  </div>
-  <div class="card">
-      <h3>Espacio #3</h3>
+  <div class="card" *ngFor="let place of places" (click)="openModal(place)">
+    <h3>{{ place.name }}</h3>
+    <p>Creado: {{ place.create_at | date : "short" }}</p>
   </div>
 </div>
+
+<information-sensors
+  *ngIf="selectedPlace"
+  [placeName]="selectedPlace.name"
+  [placeId]="selectedPlace.id_place"
+  (closeModal)="closeModal()"
+>
+</information-sensors>

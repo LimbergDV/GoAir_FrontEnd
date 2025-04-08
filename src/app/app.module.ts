@@ -18,6 +18,7 @@ import { UserApi } from './infrastructure/api/user.apis';
 import { ApplicationRepository } from './core/applications/repositories/application.repository';
 import { ApplciationApi } from './infrastructure/api/applications.api';
 import { UserRepository } from './core/users/repositories/user.repository';
+import { StatisticsModule } from './ui/statistics/statistics.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,7 @@ import { UserRepository } from './core/users/repositories/user.repository';
     RegisterModule,
     AdminsModule,
     MyPlacesModule,
+    StatisticsModule
   ],
   providers: [
     { provide: MetricRepository, useClass: MetricSocket },
@@ -41,7 +43,7 @@ import { UserRepository } from './core/users/repositories/user.repository';
   bootstrap: [AppComponent],
 })
 export class AppModule implements OnInit {
-  constructor(private conn: ConnectionWS) {}
+  constructor(private conn: ConnectionWS) { }
 
   ngOnInit(): void {
     
