@@ -12,6 +12,8 @@ import { UserMapper } from '../../core/users/adapters/mappers/user.mapper';
 import { Place } from '../../core/admin/domain/place.model';
 import { PlacesResponseDTO } from '../../core/admin/adapters/dtos/placeList.dto';
 import { PlaceMapper } from '../../core/admin/adapters/mappers/place.dto';
+import { IDSDTO } from '../../core/admin/adapters/dtos/ids.dto';
+import { IDS } from '../../core/admin/adapters/mappers/ids.mapper';
 
 @Injectable({
   providedIn: 'root',
@@ -25,6 +27,14 @@ export class AdminApi implements AdminRepository {
   });
 
   constructor(private http: HttpClient) {}
+  getIDS(id_palce: number): Observable<IDSDTO> {
+    return this.http
+      .get<IDSDTO>(`${this.URL_BASE}/sensors/${id_palce}`, {
+        headers: this.headers,
+      })
+      .pipe(map(IDS.map));
+  }
+
   getPlacesUser(id_user: number): Observable<Place[]> {
     return this.http
       .get<PlacesResponseDTO>(`${this.URL_BASE}/places/${id_user}`, {

@@ -10,20 +10,18 @@
       <div class="sensors-grid">
         <div class="sensor-group">
           <span class="group-title">Dispositivo 1</span>
-          <span class="sensor-item">ID: asdfasdfasewrfassescasegsearfsaef</span>
-          <span class="sensor-item">MQ135: </span>
-          <span class="sensor-item">Temp:</span>
-          <span class="sensor-item">Hum:</span>
+          <span class="sensor-item">ID: {{ devices[0].id_device }}</span>
+          <span class="sensor-item">MQ135: {{ sensors[0].id_sensor }}</span>
+          <span class="sensor-item">Temp: {{ sensors[2].id_sensor }}</span>
+          <span class="sensor-item">Hum: {{ sensors[4].id_sensor }}</span>
         </div>
 
         <div class="sensor-group">
           <span class="group-title">Dispositivo 2</span>
-          <span class="sensor-item">
-            ID: asdfasdfasdfasdsfasdfasdfassdfasdfa
-          </span>
-          <span class="sensor-item">MQ135: </span>
-          <span class="sensor-item">Temp:</span>
-          <span class="sensor-item">Hum:</span>
+          <span class="sensor-item"> ID: {{ devices[1].id_device }} </span>
+          <span class="sensor-item">MQ135: {{ sensors[1].id_sensor }}</span>
+          <span class="sensor-item">Temp: {{ sensors[3].id_sensor }}</span>
+          <span class="sensor-item">Hum: {{ sensors[5].id_sensor }}</span>
         </div>
       </div>
 
