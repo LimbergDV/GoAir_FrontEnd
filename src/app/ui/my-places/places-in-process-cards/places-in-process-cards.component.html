@@ -1,16 +1,17 @@
 <h1 class="your-places-text">Lugares en proceso</h1>
 <div class="cards-container">
-  <div class="card">
+  <div class="card" *ngFor="let app of apps">
     <div class="status-container">
       <span class="status-icon green"></span>
-      <h3>Estado</h3>
-    </div>
-    <h3>Nombre del lugar</h3>
-  </div>
-  <div class="card">
-    <div class="status-container">
-      <span class="status-icon green"></span>
-      <h3>Estado</h3>
+      <h3>
+        {{
+          app.status_application === "pending"
+            ? "Pendiente"
+            : app.status_application === "requested"
+            ? "Solicitado"
+            : app.status_application
+        }}
+      </h3>
     </div>
     <h3>Nombre del lugar</h3>
   </div>
