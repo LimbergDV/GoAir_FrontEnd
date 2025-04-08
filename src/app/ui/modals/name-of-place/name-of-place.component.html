@@ -1,0 +1,29 @@
+<div class="card">
+  <button (click)="showDialog()" class="btn-primary">Atender solicitud</button>
+
+  <div *ngIf="visible" class="modal-overlay fade-animation">
+    <div class="modal-container slide-animation">
+      <div class="modal-header">
+        <h3>Atender solicitud</h3>
+      </div>
+
+      <div class="modal-content">
+        <div class="input-group">
+          <label for="place" class="input-label">Nombre del lugar</label>
+          <input
+            type="text"
+            id="place"
+            [(ngModel)]="place"
+            class="text-input"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button (click)="accept()" class="btn-secondary">Cancelar</button>
+        <button (click)="cancel()" class="btn-confirm">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
