@@ -1,0 +1,34 @@
+.all-charts-container {
+    margin-left: 60px;
+    padding-bottom: 50px;
+    background-color: rgba(0, 255, 255, 0);
+    box-sizing: border-box; /* este es el valor correcto */
+    justify-content: space-between;
+
+
+  }
+  
+  .chart-group-top {
+    margin-left: 120px;
+    align-items: center;
+    display: flex ;
+    gap: 5px;
+
+  }
+
+  .chart-u-line {
+    background-color: rgba(255, 0, 0, 0);
+    width:800px;
+
+  }
+
+  .chart-bar {
+    width:500px;
+    background-color: rgba(0, 128, 0, 0);
+  }
+  
+  
+  .chart-bottom {
+    margin-top: 40px;
+  }
+  

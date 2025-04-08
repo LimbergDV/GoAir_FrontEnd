@@ -8,6 +8,7 @@ import { LoginAdminsPagesComponent } from './ui/admins/login-admins-pages/login-
 import { SpacesAdminsPageComponent } from './ui/admins/spaces-admins-page/spaces-admins-page.component';
 import { DetailsClientPageComponent } from './ui/admins/details-client-page/details-client-page.component';
 import { MyPlacesPageComponent } from './ui/my-places/my-places-page/my-places-page.component';
+import { StatisticsPageComponent } from './ui/statistics/statistics-page/statistics-page.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,8 @@ const routes: Routes = [
   {path: "manage", component: SpacesAdminsPageComponent},
   {path: "details/:name", component: DetailsClientPageComponent},
   {path: "myPlaces", component: MyPlacesPageComponent},
+  {path:"statistics", component: StatisticsPageComponent}
+
 ];
 
 @NgModule({

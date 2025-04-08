@@ -1,0 +1,32 @@
+.chart-container {
+    width: 90%; /* Tamaño adaptable */
+    max-width: 350px; /* Máximo tamaño en pantallas grandes */
+    height: auto; /* Altura automática para mantener proporciones */
+    margin: auto; /* Centra el gráfico */
+    margin-top: 50px;
+    padding: 10px;
+    background: #585757; /* Fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Tamaño más pequeño en móviles */
+  @media (max-width: 768px) {
+    .chart-container {
+      width: 100%; /* Ocupa todo el ancho */
+      max-width: 400px; /* Máximo para evitar que sea demasiado pequeño */
+      padding: 5px; /* Menos padding en pantallas pequeñas */
+    }
+  }
+  
+  /* Ajustes adicionales para pantallas aún más pequeñas */
+  @media (max-width: 480px) {
+    .chart-container {
+      max-width: 300px; /* Reduce aún más el tamaño */
+      padding: 5px;
+    }
+  }
+  
