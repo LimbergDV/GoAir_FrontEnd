@@ -15,7 +15,7 @@
 }
 
 .card {
-  background-color: #50C878;
+  background-color: #50c878;
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -25,7 +25,9 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  flex-direction: column;
   color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
 .card h3 {
@@ -34,17 +36,15 @@
   text-align: center;
   margin: 5px 0;
   width: 100%;
-  font-size: 4.5vh ;
+  font-size: 4.5vh;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-
-
 @media (max-width: 768px) {
   .card {
-      width: 100%;
+    width: 100%;
   }
 }

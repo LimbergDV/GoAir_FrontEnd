@@ -1,12 +1,14 @@
 <h3 class="subtitle">Solicitudes de lugares</h3>
 <div class="cards-container">
-  <div class="card">
-      <h3>Pendiente</h3>
-  </div>
-  <div class="card">
-      <h3>Pendiente</h3>
-  </div>
-  <div class="card">
-      <h3>Pendiente</h3>
+  <div
+    *ngFor="let app of applications"
+    [ngClass]="getCardClass(app.status_application)"
+    (click)="openModal(app)"
+  >
+    <h3>{{ getStatusLabel(app.status_application) }}</h3>
   </div>
 </div>
+
+<!-- Modales (sin botones internos) -->
+<app-name-of-place></app-name-of-place>
+<app-confirm-instalation></app-confirm-instalation>

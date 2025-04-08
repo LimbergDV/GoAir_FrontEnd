@@ -1,0 +1,45 @@
+<!-- Modal de Información de Sensores -->
+<div class="modal-overlay">
+  <div class="modal-container">
+    <div class="modal-header">
+      <!-- Se muestra el nombre del lugar recibido -->
+      <h3>{{ placeName }}</h3>
+    </div>
+
+    <div class="modal-content">
+      <div class="sensors-grid">
+        <div class="sensor-group">
+          <span class="group-title">Dispositivo 1</span>
+          <span class="sensor-item">ID: {{ devices[0].id_device }}</span>
+          <span class="sensor-item">MQ135: {{ sensors[0].id_sensor }}</span>
+          <span class="sensor-item">Temp: {{ sensors[2].id_sensor }}</span>
+          <span class="sensor-item">Hum: {{ sensors[4].id_sensor }}</span>
+        </div>
+
+        <div class="sensor-group">
+          <span class="group-title">Dispositivo 2</span>
+          <span class="sensor-item"> ID: {{ devices[1].id_device }} </span>
+          <span class="sensor-item">MQ135: {{ sensors[1].id_sensor }}</span>
+          <span class="sensor-item">Temp: {{ sensors[3].id_sensor }}</span>
+          <span class="sensor-item">Hum: {{ sensors[5].id_sensor }}</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button (click)="accept()" class="btn-accept">Aceptar</button>
+        <!-- Al hacer click en este botón se activa la modal de confirmación de eliminación -->
+        <button (click)="openModal()" class="btn-confirm">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal para confirmar eliminación (se muestra si optionDelete es true) -->
+<div class="delete-modal" *ngIf="optionDelete">
+  <div class="delete-modal-content">
+    <span class="close" (click)="closeModalD()">&times;</span>
+    <h3>¿Desea eliminar el lugar?</h3>
+    <button (click)="closeModalD()" class="btn-accept">Cancelar</button>
+    <button (click)="deletePlace(placeId)" class="btn-confirm">Eliminar</button>
+  </div>
+</div>

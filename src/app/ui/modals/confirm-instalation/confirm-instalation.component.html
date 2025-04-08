@@ -1,0 +1,20 @@
+<div class="card">
+  <div *ngIf="visible" class="modal-overlay" [class.closing]="isClosing">
+    <div class="modal-container" [class.closing]="isClosing">
+      <div class="modal-header">
+        <h3>Confirmar instalación</h3>
+      </div>
+
+      <div class="modal-content">
+        <p class="confirmation-text">
+          Confirme solo si la instalación ha sido completada con éxito
+        </p>
+      </div>
+
+      <div class="modal-actions">
+        <button (click)="cancel()" class="btn-cancel">Cancelar</button>
+        <button (click)="confirm()" class="btn-confirm">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: "details/:name", component: DetailsClientPageComponent},
   {path: "myPlaces", component: MyPlacesPageComponent},
   {path:"statistics", component: StatisticsPageComponent}
+
 ];
 
 @NgModule({
