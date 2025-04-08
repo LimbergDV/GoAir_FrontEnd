@@ -58,15 +58,15 @@ export class InformationSensorsComponent implements OnInit {
       next: (res) => {
         console.log(res);
         alert('Lugar eliminado correctamente');
-        //recargar la página
+        this.optionDelete = false;
+        this.closeModal.emit();
       },
       error: (err) => {
         console.log(err);
         alert('Ocurrió un error al intentar eliminar el lugar');
+        this.optionDelete = false;
+        this.closeModal.emit();
       },
     });
-
-    this.optionDelete = false;
-    this.closeModal.emit();
   }
 }

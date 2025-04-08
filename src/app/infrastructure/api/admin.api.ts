@@ -17,6 +17,7 @@ import { IDS } from '../../core/admin/adapters/mappers/ids.mapper';
 import { Application } from '../../core/admin/domain/apps.model';
 import { ApplicationsResponseDTO } from '../../core/admin/adapters/dtos/apps.dtos';
 import { ApplicationMapperRes } from '../../core/admin/adapters/mappers/apps.mapper';
+import { NewPlace } from '../../core/admin/domain/newPlace.model';
 
 @Injectable({
   providedIn: 'root',
@@ -30,6 +31,18 @@ export class AdminApi implements AdminRepository {
   });
 
   constructor(private http: HttpClient) {}
+  
+  confirmInstallation(id_app: number): Observable<any> {
+    return this.http.delete(`${this.URL_BASE}/confirm/${id_app}`, {
+      headers: this.headers,
+    });
+  }
+
+  createPlace(place: NewPlace): Observable<any> {
+    return this.http.post(`${this.URL_BASE}/`, place, {
+      headers: this.headers,
+    });
+  }
 
   getApp(id_user: number): Observable<Application[]> {
     return this.http

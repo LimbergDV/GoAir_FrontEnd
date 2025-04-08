@@ -5,6 +5,7 @@ import { User } from '../../users/domain/user.model';
 import { Place } from '../domain/place.model';
 import { IDSDTO } from '../adapters/dtos/ids.dto';
 import { Application } from '../domain/apps.model';
+import { NewPlace } from '../domain/newPlace.model';
 
 export abstract class AdminRepository {
   abstract signIn(admin: Admin): Observable<SessionAdmin>;
@@ -13,4 +14,6 @@ export abstract class AdminRepository {
   abstract getIDS(id_palce: number): Observable<IDSDTO>;
   abstract deletePlace(id_place: number): Observable<any>;
   abstract getApp(id_user: number): Observable<Application[]>;
+  abstract createPlace(place: NewPlace): Observable<any>;
+  abstract confirmInstallation(id_app: number): Observable<any>;
 }

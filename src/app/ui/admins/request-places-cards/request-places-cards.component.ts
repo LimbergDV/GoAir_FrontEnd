@@ -2,7 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { GetApp } from '../../../core/admin/useCases/getApp.useCase';
 import { Application } from '../../../core/admin/domain/apps.model';
 import { NameOfPlaceComponent } from '../../modals/name-of-place/name-of-place.component';
-import { InformationPlaceSensorsComponent } from '../../modals/information-place-sensors/information-place-sensors.component';
+import { ConfirmInstalationComponent } from '../../modals/confirm-instalation/confirm-instalation.component';
 
 @Component({
   selector: 'app-request-places-cards',
@@ -12,7 +12,7 @@ import { InformationPlaceSensorsComponent } from '../../modals/information-place
 export class RequestPlacesCardsComponent implements OnInit {
   @Input({ required: true }) id_user!: number;
   @ViewChild(NameOfPlaceComponent) nameOfPlaceModal!: NameOfPlaceComponent;
-  @ViewChild(InformationPlaceSensorsComponent) infoSensorsModal!: InformationPlaceSensorsComponent;
+  @ViewChild(ConfirmInstalationComponent) infoSensorsModal!: ConfirmInstalationComponent;
 
   applications: Application[] = [];
 
@@ -61,9 +61,9 @@ export class RequestPlacesCardsComponent implements OnInit {
 
   openModal(app: Application) {
     if (app.status_application === 'requested') {
-      this.nameOfPlaceModal.showDialog();
+      this.nameOfPlaceModal.showDialog(app);
     } else if (app.status_application === 'pending') {
-      this.infoSensorsModal.showDialog();
+      this.infoSensorsModal.showDialog(app);
     }
   }
 }

@@ -1,6 +1,4 @@
 <div class="card">
-  <button (click)="showDialog()" class="btn-primary">Abrir confirmación</button>
-
   <div *ngIf="visible" class="modal-overlay" [class.closing]="isClosing">
     <div class="modal-container" [class.closing]="isClosing">
       <div class="modal-header">
@@ -8,7 +6,9 @@
       </div>
 
       <div class="modal-content">
-        <p class="confirmation-text">Confirme solo si la instalación ha sido completada con éxito</p>
+        <p class="confirmation-text">
+          Confirme solo si la instalación ha sido completada con éxito
+        </p>
       </div>
 
       <div class="modal-actions">
