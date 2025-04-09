@@ -32,3 +32,18 @@
     margin-top: 40px;
   }
   
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 5.25rem;
+    width: calc(100% - 5.25rem);
+    height: 60px;
+    background: white;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 10;
+  }

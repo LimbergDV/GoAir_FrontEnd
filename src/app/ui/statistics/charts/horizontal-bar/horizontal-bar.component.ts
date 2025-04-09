@@ -1,42 +1,59 @@
 import { isPlatformBrowser } from '@angular/common';
-import { ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Inject,
+  Input,
+  OnChanges,
+  PLATFORM_ID,
+  SimpleChanges,
+} from '@angular/core';
+import { AirQualityAvgDto } from '../../../../core/sensors/domain/graphics.models';
 
 @Component({
   selector: 'app-horizontal-bar',
   templateUrl: './horizontal-bar.component.html',
-  styleUrls: ['./horizontal-bar.component.css']
+  styleUrls: ['./horizontal-bar.component.css'],
 })
-
-export class HorizontalBarComponent implements OnInit {
+export class HorizontalBarComponent implements OnChanges {
+  @Input() airq!: AirQualityAvgDto[];
   data: any;
   options: any;
 
   constructor(
     private cd: ChangeDetectorRef,
-    @Inject(PLATFORM_ID) private platformId: any,
+    @Inject(PLATFORM_ID) private platformId: any
   ) {}
 
-  ngOnInit() {
-    this.initChart();
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['airq'] && this.airq && this.airq.length > 0) {
+      this.initChart();
+    }
   }
 
   initChart() {
     if (isPlatformBrowser(this.platformId)) {
       const documentStyle = getComputedStyle(document.documentElement);
-      const textColor = documentStyle.getPropertyValue('--p-text-color') || '#fff';
-      const textColorSecondary = documentStyle.getPropertyValue('--p-text-muted-color') || '#fff';
-      const surfaceBorder = documentStyle.getPropertyValue('--p-content-border-color') || '#fff';
-//promedio de 5
+      const textColor =
+        documentStyle.getPropertyValue('--p-text-color') || '#fff';
+      const textColorSecondary =
+        documentStyle.getPropertyValue('--p-text-muted-color') || '#fff';
+      const surfaceBorder =
+        documentStyle.getPropertyValue('--p-content-border-color') || '#fff';
+
+      const labels = this.airq.map((t) => t.Fecha);
+      const dataValues = this.airq.map((t) => t.Promedio_calidad_aire);
+      //promedio de 5
       this.data = {
-        labels: ['January', 'February', 'March', 'April', 'May',],
+        labels: labels,
         datasets: [
           {
-            label: 'Dataset 1',
+            label: 'Calidad de aire en los últimos tres días',
             backgroundColor: 'rgba(123, 176, 246, 0.5)',
             borderColor: 'rgb(121, 63, 63)',
-            data: [65, 59, 80, 81, 56]
-          }
-        ]
+            data: dataValues,
+          },
+        ],
       };
 
       this.options = {
@@ -46,33 +63,33 @@ export class HorizontalBarComponent implements OnInit {
         plugins: {
           legend: {
             labels: {
-              color: textColor
-            }
-          }
+              color: textColor,
+            },
+          },
         },
         scales: {
           x: {
             ticks: {
               color: textColorSecondary,
               font: {
-                weight: 500
-              }
+                weight: 500,
+              },
             },
             grid: {
               color: surfaceBorder,
-              drawBorder: false
-            }
+              drawBorder: false,
+            },
           },
           y: {
             ticks: {
-              color: textColorSecondary
+              color: textColorSecondary,
             },
             grid: {
               color: surfaceBorder,
-              drawBorder: false
-            }
-          }
-        }
+              drawBorder: false,
+            },
+          },
+        },
       };
 
       this.cd.markForCheck();

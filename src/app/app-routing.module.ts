@@ -20,7 +20,7 @@ const routes: Routes = [
   {path: "manage", component: SpacesAdminsPageComponent},
   {path: "details/:name", component: DetailsClientPageComponent},
   {path: "myPlaces", component: MyPlacesPageComponent},
-  {path:"statistics", component: StatisticsPageComponent}
+  {path: "statistics", component: StatisticsPageComponent}
 
 ];
 
